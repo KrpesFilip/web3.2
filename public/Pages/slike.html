@@ -1,0 +1,304 @@
+
+
+
+
+
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Gallery page for web page project on weather statistics">
+        <meta name="keywords" content="HTML, CSS, Student Project, Weather">
+        <meta name="author" content="Filip Krpes">
+        <link rel="stylesheet" href="../Styles/style_slike.css">
+		<title>Galerija</title> 
+	
+		<script>
+			// Open the Modal
+function openModal() {
+	document.getElementById("myModal").style.display = "block";
+  }
+  
+  // Close the Modal
+  function closeModal() {
+	document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+	showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+	showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("demo");
+	var captionText = document.getElementById("caption");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+	  slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+	  dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+	captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+		</script>
+	</head>
+
+
+    <body>
+	<header><h1>Image Gallery</h1></header>
+	<section class="gallery"> 
+	
+	
+
+    
+
+	<nav aria-label="navigation to the homepage, grph page and gallery"> 
+		<ul aria-hidden="true"> 
+			<li class="dropdown" aria-hidden="true">	
+				<a  class="dropbtn" aria-hidden="true">| | |</a>
+				<section class="dropdown-content" aria-hidden="true">
+					<a href="../index.html" aria-label="Navigation to home page">Homepage</a>
+					<a href="slike.html" aria-label="Navigation to gallery page">Galery</a>
+					<a href="grafikon.html" aria-label="Navigation to graf page">Graf</a>
+				</section>
+			</li>
+		</ul>
+	</nav>
+
+	
+
+
+	<figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="1.jpg">
+		  <img src="https://unsplash.it/300/200?random=1" onclick="openModal();currentSlide(1)" alt="Slika 1" >
+		</a>
+		<figcaption>Slika 1</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="2.jpg">
+		  <img src="https://unsplash.it/300/200?random=2" onclick="openModal();currentSlide(2)" alt="Slika 2" >
+		</a>
+		<figcaption>Slika 2</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="3.jpg">
+		  <img src="https://unsplash.it/300/200?random=3" onclick="openModal();currentSlide(3)" alt="Slika 3">
+		</a>
+		<figcaption>Slika 3</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="4.jpg">
+		  <img src="https://unsplash.it/300/200?random=4" onclick="openModal();currentSlide(4)" alt="Slika 4">
+		</a>
+		<figcaption>Slika 4</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="5.jpg">
+		  <img src="https://unsplash.it/300/200?random=5"  onclick="openModal();currentSlide(5)" alt="Slika 5">
+		</a>
+		<figcaption>Slika 5</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="6.jpg">
+		  <img src="https://unsplash.it/300/200?random=6" onclick="openModal();currentSlide(6)" alt="Slika 6">
+		</a>
+		<figcaption>Slika 6</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="7.jpg">
+		  <img src="https://unsplash.it/300/200?random=7" onclick="openModal();currentSlide(7)" alt="Slika 7">
+		</a>
+		<figcaption>Slika 7</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="8.jpg">
+		  <img src="https://unsplash.it/300/200?random=8" onclick="openModal();currentSlide(8)" alt="Slika 8">
+		</a>
+		<figcaption>Slika 8</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="9.jpg">
+		  <img src="https://unsplash.it/300/200?random=9" onclick="openModal();currentSlide(9)" alt="Slika 9">
+		</a>
+		<figcaption>Slika 9</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="10.jpg">
+		  <img src="https://unsplash.it/300/200?random=10" onclick="openModal();currentSlide(10)" alt="Slika 10">
+		</a>
+		<figcaption>Slika 10</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="11.jpg">
+		  <img src="https://unsplash.it/300/200?random=11" onclick="openModal();currentSlide(11)" alt="Slika 11">
+		</a>
+		<figcaption>Slika 11</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="12.jpg">
+		  <img src="https://unsplash.it/300/200?random=12" onclick="openModal();currentSlide(12)" alt="Slika 12">
+		</a>
+		<figcaption>Slika 12</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="13.jpg">
+		  <img src="https://unsplash.it/300/200?random=13" onclick="openModal();currentSlide(13)" alt="Slika 13">
+		</a>
+		<figcaption>Slika 13</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="14.jpg">
+		  <img src="https://unsplash.it/300/200?random=14" onclick="openModal();currentSlide(14)" alt="Slika 14">
+		</a>
+		<figcaption>Slika 14</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="15.jpg">
+		  <img src="https://unsplash.it/300/200?random=15" onclick="openModal();currentSlide(15)" alt="Slika 15">
+		</a>
+		<figcaption>Slika 15</figcaption>
+	  </figure>
+	  
+	  <figure class="galerija_slika">
+		<a class="image-popup-vertical-fit"  title="16.jpg">
+		  <img src="https://unsplash.it/300/200?random=16" onclick="openModal();currentSlide(16)" alt="Slika 16">
+		</a>
+		<figcaption>Slika 16</figcaption>
+	  </figure>
+	  
+	  <div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+	  
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=1" style="width:100%">
+		  </div>
+	  
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=2" style="width:100%">
+		  </div>
+	  
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=3" style="width:100%">
+		  </div>
+	  
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=4" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=5" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=6" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=7" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=8" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=9" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=10" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=11" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=12" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=13" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=14" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=15" style="width:100%">
+		  </div>
+
+		  <div class="mySlides">
+			
+			<img src="https://unsplash.it/900?random=16" style="width:100%">
+		  </div>
+	  
+		  <!-- Next/previous controls -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	  
+		  
+	  
+		  
+		  
+		</div>
+	  </div>
+
+	
+	  
+</section>
+
+
+
+<footer aria-hidden="true">
+	<p aria-label="footer with copyright ">&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+	</footer>
+
+</body>
+</html>

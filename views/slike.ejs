@@ -1,0 +1,134 @@
+
+
+
+
+
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Gallery page for web page project on weather statistics">
+        <meta name="keywords" content="HTML, CSS, Student Project, Weather">
+        <meta name="author" content="Filip Krpes">
+        <link rel="stylesheet" href="/Styles/style_slike.css">
+		<title>Galerija</title> 
+	
+		<script>
+			// Open the Modal
+function openModal() {
+	document.getElementById("myModal").style.display = "block";
+  }
+  
+  // Close the Modal
+  function closeModal() {
+	document.getElementById("myModal").style.display = "none";
+  }
+  
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  // Next/previous controls
+  function plusSlides(n) {
+	showSlides(slideIndex += n);
+  }
+  
+  // Thumbnail image controls
+  function currentSlide(n) {
+	showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+	var i;
+	var slides = document.getElementsByClassName("mySlides");
+	var dots = document.getElementsByClassName("demo");
+	var captionText = document.getElementById("caption");
+	if (n > slides.length) {slideIndex = 1}
+	if (n < 1) {slideIndex = slides.length}
+	for (i = 0; i < slides.length; i++) {
+	  slides[i].style.display = "none";
+	}
+	for (i = 0; i < dots.length; i++) {
+	  dots[i].className = dots[i].className.replace(" active", "");
+	}
+	slides[slideIndex-1].style.display = "block";
+	dots[slideIndex-1].className += " active";
+	captionText.innerHTML = dots[slideIndex-1].alt;
+  }
+		</script>
+	</head>
+
+
+    <body>
+	<header><h1>Image Gallery</h1></header>
+	
+	<nav aria-label="navigation to the homepage, grph page and gallery"> 
+		<ul aria-hidden="true"> 
+			<li class="dropdown" aria-hidden="true">	
+				<a  class="dropbtn" aria-hidden="true">| | |</a>
+				<section class="dropdown-content" aria-hidden="true">
+					<a href="/" aria-label="Navigation to home page">Homepage</a>
+					<a href="slike" aria-label="Navigation to gallery page">Galery</a>
+					<a href="Pages/grafikon.html" aria-label="Navigation to graf page">Graf</a>
+				</section>
+			</li>
+		</ul>
+	</nav>
+
+	<section class="gallery">
+		<% images.forEach((image, index) => { %>
+		<figure>
+		<img src="<%= image.url %>" onclick="openModal();currentSlide(<%= index + 1 %>)" alt="<%= image.title %>">
+		<figcaption><%= image.title %></figcaption>
+		</figure>
+		<% }); %>
+		</section>
+	
+	<section class="gallery"> 
+	
+	
+
+    
+
+	
+
+	
+
+
+	
+	  
+	  <div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+	  
+			<% images.forEach(image => { %>
+				<div class="mySlides">
+				<img src="<%= image.url %>"  style="width:100%">
+				</div>
+				<% }); %>
+
+		  
+	  
+		  <!-- Next/previous controls -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	  
+		  
+	  
+		  
+		  
+		</div>
+	  </div>
+
+	
+	  
+</section>
+
+
+
+<footer aria-hidden="true">
+	<p aria-label="footer with copyright ">&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+	</footer>
+
+</body>
+</html>

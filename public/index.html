@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+	<html lang="hr">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Main page for web page project on weather statistics">
+        <meta name="keywords" content="HTML, CSS, Student Project, Weather">
+        <meta name="author" content="Filip Krpes">
+		
+        <link rel="stylesheet" href="Styles/style.css">
+		<title>WeatherPage</title> 
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+	</head>
+	<body>
+		<header>
+		<h1>The weather page</h1>
+		</header>
+		
+		<nav aria-label="navigation to the homepage, grph page and gallery"> <!-- dodati obilježja za ARIA-->
+			<ul aria-hidden="true"> <!-- dodati da je navigacija lijevo poravnata i da je skrivena-->
+				<li class="dropdown" aria-hidden="true">	
+					<a  class="dropbtn" aria-hidden="true">| | |</a>
+    				<section class="dropdown-content" aria-hidden="true">
+						<a href="/" aria-label="Navigation to homepage">Homepage</a>
+						<a href="slike" aria-label="Navigation to gallery page">Galery</a>
+						<a href="Pages/grafikon.html" aria-label="Navigation to graf page">Graf</a>
+					</section>
+				</li>
+			</ul>
+		</nav>
+
+
+
+		<h1>Weather data</h1>
+
+        <aside>
+            
+            <img src="Images/weather.png"  alt="Logo of a cloud" class="responsive-image">
+                
+              
+
+        </aside>
+
+		<table aria-label="Table of different weather conditions ">
+			<tr>
+				<th>Temperature (°C)</th>
+				<th>Humidity (%)</th>
+				<th>Wind Speed (km/h)</th>
+				<th>Precipitation (%)</th>
+				<th>Cloud Cover</th>
+				<th>Atmospheric Pressure</th>
+				<th>UV Index</th>
+				<th>Season</th>
+				<th>Visibility (km)</th>
+				<th>Location</th>
+				<th>Weather Type</th>
+			</tr>
+			<tr><td>23</td><td>69</td><td>9.5</td><td>10</td><td>clear</td><td>1012.91</td><td>9</td><td>Spring</td><td>8.5</td><td>inland</td><td>Sunny</td></tr>
+			<tr><td>29</td><td>82</td><td>18</td><td>78</td><td>overcast</td><td>991.54</td><td>3</td><td>Spring</td><td>4</td><td>inland</td><td>Rainy</td></tr>
+			<tr><td>36</td><td>48</td><td>3.5</td><td>11</td><td>partly cloudy</td><td>1024.92</td><td>10</td><td>Autumn</td><td>5.5</td><td>mountain</td><td>Sunny</td></tr>
+			<tr><td>32</td><td>35</td><td>5.5</td><td>9</td><td>partly cloudy</td><td>1010.24</td><td>6</td><td>Summer</td><td>9</td><td>coastal</td><td>Sunny</td></tr>
+			<tr><td>23</td><td>23</td><td>3.5</td><td>8</td><td>clear</td><td>1027.69</td><td>5</td><td>Spring</td><td>6.5</td><td>mountain</td><td>Sunny</td></tr>
+			<tr><td>30</td><td>57</td><td>12.5</td><td>33</td><td>overcast</td><td>1002.2</td><td>1</td><td>Autumn</td><td>7</td><td>inland</td><td>Cloudy</td></tr>
+			<tr><td>28</td><td>65</td><td>1.5</td><td>20</td><td>partly cloudy</td><td>1007</td><td>4</td><td>Spring</td><td>8.5</td><td>mountain</td><td>Cloudy</td></tr>
+			<tr><td>29</td><td>96</td><td>11.5</td><td>79</td><td>partly cloudy</td><td>1013.23</td><td>0</td><td>Spring</td><td>1</td><td>inland</td><td>Rainy</td></tr>
+			<tr><td>35</td><td>63</td><td>8</td><td>3</td><td>clear</td><td>1029.83</td><td>10</td><td>Spring</td><td>5</td><td>mountain</td><td>Sunny</td></tr>
+			<tr><td>18</td><td>82</td><td>8.5</td><td>83</td><td>overcast</td><td>999.13</td><td>0</td><td>Summer</td><td>2.5</td><td>coastal</td><td>Rainy</td></tr>
+			<tr><td>8</td><td>90</td><td>1.5</td><td>70</td><td>partly cloudy</td><td>1011.19</td><td>10</td><td>Spring</td><td>7.5</td><td>mountain</td><td>Cloudy</td></tr>
+			<tr><td>19</td><td>65</td><td>2.5</td><td>20</td><td>partly cloudy</td><td>1016.81</td><td>1</td><td>Spring</td><td>8</td><td>inland</td><td>Cloudy</td></tr>
+			<tr><td>28</td><td>72</td><td>14</td><td>73</td><td>partly cloudy</td><td>1005.12</td><td>1</td><td>Summer</td><td>1</td><td>coastal</td><td>Rainy</td></tr>
+			<tr><td>40</td><td>94</td><td>15</td><td>97</td><td>clear</td><td>1021.59</td><td>3</td><td>Autumn</td><td>4.5</td><td>coastal</td><td>Sunny</td></tr>
+			<tr><td>15</td><td>61</td><td>11</td><td>63</td><td>overcast</td><td>1006.12</td><td>3</td><td>Spring</td><td>4.5</td><td>mountain</td><td>Rainy</td></tr>
+			<tr><td>26</td><td>90</td><td>26</td><td>88</td><td>partly cloudy</td><td>998.97</td><td>4</td><td>Summer</td><td>2.5</td><td>coastal</td><td>Rainy</td></tr>
+			<tr><td>26</td><td>67</td><td>11</td><td>74</td><td>overcast</td><td>993.37</td><td>1</td><td>Spring</td><td>1.5</td><td>inland</td><td>Rainy</td></tr>
+		</table>
+
+        
+
+		<section aria-hidden="true"> 
+			<h2 aria-label="Main article about weather">Main section</h2>
+			<p aria-hidden="true">Sample text about the weather. </p>
+		</section aria-hidden="true">
+		 
+		<article aria-hidden="true">
+			<h2 aria-label="weather article">Weather news</h2>
+			<p aria-hidden="true">Weather article</p>
+		</article>
+		
+		<h1>Weather Data Table</h1>
+  		
+		<div id="filters">
+			<label for="season">Select Season:</label>
+			<select id="season" name="season">
+			  <option value="">All</option>
+			  <option value="Spring">Spring</option>
+			  <option value="Summer">Summer</option>
+			  <option value="Autumn">Autumn</option>
+			</select>
+		
+			<label for="temperature-range">Temperature Range:</label>
+			<div id="temperature-range-container">
+			  <div>
+				<label for="min-temp">Min Temp:</label>
+				<input type="range" id="min-temp" min="0" max="50" step="1" value="0">
+				<span id="min-temp-value">0°C</span>
+			  </div>
+		
+			  <div>
+				<label for="max-temp">Max Temp:</label>
+				<input type="range" id="max-temp" min="0" max="50" step="1" value="50">
+				<span id="max-temp-value">50°C</span>
+			  </div>
+			</div>
+		  </div>
+
+		<div id="table-container">Loading...</div>
+		<button id="cart-toggle-button">View Cart</button>
+		<aside id="cart">
+			<h3>Cart</h3>
+			<div id="cart-items"></div>
+			<button id="confirm-cart">Confirm Cart</button>
+		  </aside>
+
+  		<script src="script.js"></script>
+
+		
+		<footer aria-hidden="true">
+		<p aria-label="footer with copyright ">&copy; 2025. Web Programiranje. Sva prava pridrzana.</p>
+		</footer>
+	</body>
+	</html>
